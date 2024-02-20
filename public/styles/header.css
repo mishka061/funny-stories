@@ -1,0 +1,218 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+.headerImages img {
+  width: 130px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.headerImages1 img {
+  width: 130px;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+.navContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(255, 230, 0);
+  background-color: rgba(245, 240, 200, 0.651);
+}
+.navContent h1 {
+  padding-top: 25px;
+  font-size: 38px;
+}
+
+.headerText {
+  font-style: italic;
+  color: rgb(255, 230, 0);
+  text-shadow: -1px 1px 0 #5e0183, 1px 1px 0 #5e0183;
+}
+
+.sidebar-content-menuRegistr {
+  position: fixed;
+  width: 200px;
+  top: 160px;
+  right: -240px;
+  background-color: #f5f8d0;
+  transition: all 0.5s ease;
+  padding: 10px;
+}
+
+.sidebar-content-menuRegistr header {
+  font-size: 20px;
+  color: #353535;
+
+  text-align: center;
+  background-color: #d8f374;
+  border-radius: 10px 0;
+  font-family: "Lato", sans-serif;
+}
+.menuActiveUsers{
+  margin-top: 20px ;
+  font-size: 15px;
+  color: #353535;
+  background-color: #d8f374;
+  border-radius: 10px 0;
+  font-family: "Lato", sans-serif;
+  border: none;
+}
+#sidebarBtn-menuRegistr {
+  font-size: 17px;
+  text-align: start;
+  margin-top: 5px;
+  width: 100%;
+ 
+  border: 2px solid rgb(255, 230, 0);
+  border-radius: 10px 0;
+}
+#sidebarBtn-menuRegistr a {
+  text-decoration: none;
+  color: #5e0183;
+}
+#sidebarBtn-menuRegistr:hover {
+  background-color: rgb(255, 230, 0);
+}
+#sidebarBtn-menuRegistr a:hover {
+  color: #000000;
+}
+
+.sidebar-content-menuRegistr a i {
+  font-size: 23px;
+  margin-right: 16px;
+}
+.sidebar-content-menuRegistr a span {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+#check-menuRegistr {
+  display: none;
+}
+label #btn-menuRegistr,
+label #cancel-menuRegistr {
+  position: fixed;
+  width: 220px;
+  top: 120px;
+  right: 10px;
+  cursor: pointer;
+  color: rgb(8, 8, 8);
+  border-radius: 5px;
+  background-color: rgb(255, 230, 0);
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    inset -7px -7px 10px 0px rgba(0, 0, 0, 0.1),
+    3.5px 3.5px 20px 0px rgba(0, 0, 0, 0.1), 2px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  height: 35px;
+  width: 35px;
+  text-align: center;
+  padding-top: 10px;
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+  transition: all 0.5s ease;
+}
+label #cancel-menuRegistr {
+  opacity: 0;
+  visibility: hidden;
+}
+#check-menuRegistr:checked ~ .sidebar-content-menuRegistr {
+  right: 0;
+}
+#check-menuRegistr:checked ~ label #btn-menuRegistr {
+  opacity: 0;
+  visibility: hidden;
+}
+#check-menuRegistr:checked ~ label #cancel-menuRegistr {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .headerImages img,
+  .headerImages1 img {
+    width: 125px;
+  }
+  .navContent h1 {
+    font-size: 30px;
+  }
+  #sidebarBtn-menuRegistr {
+    font-size: 15px;
+  }
+
+  .sidebar-content-menuRegistr header {
+    font-size: 18px;
+  }
+  .sidebar-content-menuRegistr {
+    width: 180px;
+  }
+
+  label #btn-menuRegistr,
+  label #cancel-menuRegistr {
+    height: 33px;
+    width: 33px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  .headerImages img,
+  .headerImages1 img {
+    width: 120px;
+  }
+  .navContent h1 {
+    font-size: 25px;
+  }
+  .sidebar-content-menuRegistr header {
+    font-size: 17px;
+  }
+  .sidebar-content-menuRegistr {
+    width: 150px;
+  }
+
+  label #btn-menuRegistr,
+  label #cancel-menuRegistr {
+    padding-bottom: 15px;
+    height: 30px;
+    width: 30px;
+  }
+
+  #sidebarBtn-menuRegistr {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .headerImages img,
+  .headerImages1 img {
+    width: 115px;
+  }
+  .navContent h1 {
+    font-size: 20px;
+  }
+  .sidebar-content-menuRegistr header {
+    font-size: 16px;
+  }
+  .sidebar-content-menuRegistr {
+    width: 130px;
+  }
+  label #btn-menuRegistr,
+  label #cancel-menuRegistr {
+    padding-bottom: 15px;
+    height: 30px;
+    width: 30px;
+  }
+
+  #sidebarBtn-menuRegistr {
+    font-size: 13px;
+  }
+}
+
+
+.footerContent {
+  height: 60px;
+  background-color: rgb(255, 230, 0);
+  text-align: center;
+  color: #5e0183;
+  padding-top: 20px;
+}

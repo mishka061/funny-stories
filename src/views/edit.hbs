@@ -1,0 +1,105 @@
+{{#if tokenIsPresent}}
+<div class="container-fluid">
+    <div id="createStoryContainer">
+        <h4 class="h4-title">Редактировать историю</h4>
+        <div class="form signup" id="formTest">
+            <form action="/edit/{{stories._id}}" method="post">
+
+                <input type="hidden" name="id" value="{{stories._id}}">
+                <div class="story-details">
+                    <p class="story-subtitle">Текст:</p>
+                    <textarea name="text" cols="30" rows="5" class="story-text-textarea">{{stories.text}}</textarea>
+                    <p class="story-category-title">Категории:</p>
+                </div>
+                <div class="categoryContent">
+                    <div class="checkboxContent">
+                        <input type="checkbox" name="category" value="army">
+                        <p name="text">Армия</p>
+                    </div>
+                    <div class="checkboxContent">
+                        <input type="checkbox" name="category" value="adults">
+                        <p name="text">Взрослые </p>
+                    </div>
+                    <div class="checkboxContent">
+                        <input type="checkbox" name="category" value="doctors">
+                        <p name="text">Врачи</p>
+                    </div>
+                    <div class="checkboxContent">
+                        <input type="checkbox" name="category" value="money">
+                        <p name="text">Деньги</p>
+                    </div>
+                    <div class="checkboxContent">
+                        <input type="checkbox" name="category" value="animals">
+                        <p name="text">Животные</p>
+                    </div>
+                    <div class="checkboxContent">
+                        <input type="checkbox" name="category" value="life">
+                        <p name="text">Из жизни</p>
+                    </div>
+                    <div class="checkboxContent">
+                        <input type="checkbox" name="category" value="movie">
+                        <p name="text">Киногерои</p>
+                    </div>
+                    <div class="checkboxContent">
+                        <input type="checkbox" name="category" value="computer">
+                        <p name="text">Компьютер</p>
+                    </div>
+                    <div class="checkboxContent">
+                        <input type="checkbox" name="category" value="crime">
+                        <p name="text">Криминал</p>
+                    </div>
+                    <div class="checkboxContent">
+                        <input type="checkbox" name="category" value="rzhevsky">
+                        <p name="text">Ржевский</p>
+                    </div>
+                    <div class="checkboxContent">
+                        <input type="checkbox" name="category" value="family">
+                        <p name="text">Семейные</p>
+                    </div>
+                    <div class="checkboxContent">
+                        <input type="checkbox" name="category" value="fabulous">
+                        <p name="text">Сказочные</p>
+                    </div>
+                    <div class="checkboxContent">
+                        <input type="checkbox" name="category" value="social">
+                        <p name="text">Соцсети</p>
+                    </div>
+                    <div class="checkboxContent">
+                        <input type="checkbox" name="category" value="sport">
+                        <p name="text">Спорт</p>
+                    </div>
+                    <div class="checkboxContent">
+                        <input type="checkbox" name="category" value="students">
+                        <p name="text">Студенты</p>
+                    </div>
+                    <div class="checkboxContent">
+                        <input type="checkbox" name="category" value="transport">
+                        <p name="text">Транспорт</p>
+                    </div>
+                    <div class="checkboxContent">
+                        <input type="checkbox" name="category" value="humor">
+                        <p name="text">Черный юмор</p>
+                    </div>
+                    <div class="checkboxContent">
+                        <input type="checkbox" name="category" value="school">
+                        <p name="text">Школа</p>
+                    </div>
+                </div>
+                {{#ifEquals role 'User'}}
+                <input type="hidden" name="status" id="" value="Черновик">
+                {{else ifEquals role 'Administrator'}}
+                <input type="hidden" name="status" id="" value="Ожидает одобрения">
+                {{/ifEquals}}
+
+
+                {{#if textError}}
+                <div class="textError">{{textError}}</div>
+                {{/if}}
+                <div class="submit-section">
+                    <input type="submit" name="submit" class="submit-button" value="Добавить" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{{/if}}

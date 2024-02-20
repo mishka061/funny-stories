@@ -1,0 +1,139 @@
+{{#if tokenIsPresent}}
+<div class="conteinerSidebar">
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar-content">
+        <header>Меню</header>
+        <button class="sidebarBtn"><a href="" data-category="army">Армия</a></button>
+        <button class="sidebarBtn"><a href="" data-category="adults">Взрослые</a></button>
+        <button class="sidebarBtn"><a href="" data-category="doctors">Врачи</a></button>
+        <button class="sidebarBtn"><a href="" data-category="money">Деньги</a></button>
+        <button class="sidebarBtn"><a href="" data-category="animals">Животные</a></button>
+        <button class="sidebarBtn"><a href="" data-category="life">Из жизни</a></button>
+        <button class="sidebarBtn"><a href="" data-category="movie">Киногерои</a></button>
+        <button class="sidebarBtn"><a href="" data-category="computer">Компьютер</a></button>
+        <button class="sidebarBtn"><a href="" data-category="crime">Криминал</a></button>
+        <button class="sidebarBtn"><a href="" data-category="rzhevsky">Ржевский</a></button>
+        <button class="sidebarBtn"><a href="" data-category="family">Семейные</a></button>
+        <button class="sidebarBtn"><a href="" data-category="fabulous">Сказочные</a></button>
+        <button class="sidebarBtn"><a href="" data-category="social">Соцсети</a></button>
+        <button class="sidebarBtn"><a href="" data-category="sport">Спорт</a></button>
+        <button class="sidebarBtn"><a href="" data-category="students">Студенты</a></button>
+        <button class="sidebarBtn"><a href="" data-category="transport">Транспорт</a></button>
+        <button class="sidebarBtn"><a href="" data-category="humor">Черный юмор</a></button>
+        <button class="sidebarBtn"><a href="" data-category="school">Школа</a></button>
+    </div>
+</div>
+<div class="container-fluid">
+    {{#if selectedCategories}}
+    <h1>Категория: {{selectedCategories}}</h1>
+    {{/if}}
+    <div class="conteiner-stories">
+        {{#if stories}}
+        {{#each stories}}
+        <div class="title-stories">
+            <div class="text">
+                <p>{{text}}</p>
+            </div>
+
+            <div class="content-stories">
+                <p>{{login}}</p>
+                <p>{{datePublication}}</p>
+                
+            </div>
+            <div class="categories">
+                {{#if categoryElem}}
+                {{#isArray categoryElem}}
+                {{#each categoryElem}}
+                <p class="category">{{this}}</p>
+                {{/each}}
+                {{else}}
+                <p class="category">{{categoryElem}}</p>
+                {{/isArray}}
+                {{else}}
+                <p>No category available</p>
+                {{/if}}
+            </div>
+        </div>
+        {{/each}}
+        {{else}}
+        <div class="sohranennoeIzobrazhenie">
+            <img src="/sohranennoe-izobrazhenie-2015-12-17_12-13-9.429.jpg" alt="">
+        </div>
+        {{/if}}
+    </div>
+
+</div>
+{{else}}
+<div class="conteinerSidebar">
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar-content">
+        <header>Меню</header>
+        <button class="sidebarBtn"><a href="" data-category="army">Армия</a></button>
+        <button class="sidebarBtn"><a href="" data-category="adults">Взрослые</a></button>
+        <button class="sidebarBtn"><a href="" data-category="doctors">Врачи</a></button>
+        <button class="sidebarBtn"><a href="" data-category="money">Деньги</a></button>
+        <button class="sidebarBtn"><a href="" data-category="animals">Животные</a></button>
+        <button class="sidebarBtn"><a href="" data-category="life">Из жизни</a></button>
+        <button class="sidebarBtn"><a href="" data-category="movie">Киногерои</a></button>
+        <button class="sidebarBtn"><a href="" data-category="computer">Компьютер</a></button>
+        <button class="sidebarBtn"><a href="" data-category="crime">Криминал</a></button>
+        <button class="sidebarBtn"><a href="" data-category="rzhevsky">Ржевский</a></button>
+        <button class="sidebarBtn"><a href="" data-category="family">Семейные</a></button>
+        <button class="sidebarBtn"><a href="" data-category="fabulous">Сказочные</a></button>
+        <button class="sidebarBtn"><a href="" data-category="social">Соцсети</a></button>
+        <button class="sidebarBtn"><a href="" data-category="sport">Спорт</a></button>
+        <button class="sidebarBtn"><a href="" data-category="students">Студенты</a></button>
+        <button class="sidebarBtn"><a href="" data-category="transport">Транспорт</a></button>
+        <button class="sidebarBtn"><a href="" data-category="humor">Черный юмор</a></button>
+        <button class="sidebarBtn"><a href="" data-category="school">Школа</a></button>
+    </div>
+</div>
+<div class="container-fluid">
+    {{#if selectedCategories}}
+    <h1>Категория: {{selectedCategories}}</h1>
+    {{/if}}
+    <div class="conteiner-stories">
+        {{#if stories}}
+        {{#each stories}}
+        <div class="title-stories">
+            <div class="text">
+                <p>{{text}}</p>
+            </div>
+
+            <div class="content-stories">
+                <p>{{login}}</p>
+                <p>{{datePublication}}</p>
+                
+            </div>
+            <div class="categories">
+                {{#if categoryElem}}
+                {{#isArray categoryElem}}
+                {{#each categoryElem}}
+                <p class="category">{{this}}</p>
+                {{/each}}
+                {{else}}
+                <p class="category">{{categoryElem}}</p>
+                {{/isArray}}
+                {{else}}
+                <p>No category available</p>
+                {{/if}}
+            </div>
+        </div>
+        {{/each}}
+        {{else}}
+        <div class="sohranennoeIzobrazhenie">
+            <img src="/sohranennoe-izobrazhenie-2015-12-17_12-13-9.429.jpg" alt="">
+        </div>
+        {{/if}}
+    </div>
+
+</div>
+{{/if}}

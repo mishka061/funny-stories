@@ -1,0 +1,178 @@
+
+{{#if tokenIsPresent}}
+<div id="navHeaderContainer">
+    <div class="navContent">
+        <div class="headerImages">
+            <a href="/"><img src="/kloun.png" alt=""></a>
+            
+        </div>
+        <div class="headerText">
+            <h1>анекдоты и смешные истории</h1>
+        </div>
+        <div class="headerImages1">
+            <a href="/"><img src="/kloun-na-prozrachnom-fone-3.png" alt=""></a>
+            
+        </div>
+    </div>
+    <div class="menuRegistr">
+        <input type="checkbox" id="check-menuRegistr">
+        <label for="check-menuRegistr">
+            <i class="fas fa-bars" id="btn-menuRegistr"></i>
+            <i class="fas fa-times" id="cancel-menuRegistr"></i>
+        </label>
+        <div class="sidebar-content-menuRegistr">
+            <header>Меню</header>
+            {{#ifEquals role 'User'}}
+            <button class="addStoryBtn" id="sidebarBtn-menuRegistr"><a href="/addStory" class="addStory">Добавить
+                    историю</a></button>
+            <button id="sidebarBtn-menuRegistr"><a href="/">На главную</a></button>
+            <button class="profileBtn" id="sidebarBtn-menuRegistr"><a href="/profile"
+                    class="profile">Профиль</a></button>
+            {{else ifEquals role 'Administrator'}}
+            <button id="sidebarBtn-menuRegistr"><a href="/profile/Administrator">Страница для
+                    администратора</a></button>
+            <button id="sidebarBtn-menuRegistr"><a href="/">На главную</a></button>
+             {{/ifEquals}}
+            <button class="menuExit" id="sidebarBtn-menuRegistr"><a href="/" class="exitToken">Выйти</a></button>
+            {{#if activeUsers}}
+            <button class="menuActiveUsers">Активные пользователи</button>
+            {{#each activeUsers}}
+            <button id="sidebarBtn-menuRegistr">{{login}}</button>
+            {{/each}}
+            {{/if}}
+        </div>
+    </div>
+</div>
+{{else}}
+<div id="navHeaderContainer">
+    <div class="navContent">
+        <div class="headerImages">
+            <a href="/"><img src="/kloun.png" alt=""></a>
+            
+        </div>
+        <div class="headerText">
+            <h1>анекдоты и смешные истории</h1>
+        </div>
+        <div class="headerImages1">
+            <a href="/"><img src="/kloun-na-prozrachnom-fone-3.png" alt=""></a>
+            
+        </div>
+    </div>
+    <div class="menuRegistr">
+        <input type="checkbox" id="check-menuRegistr">
+        <label for="check-menuRegistr">
+            <i class="fas fa-bars" id="btn-menuRegistr"></i>
+            <i class="fas fa-times" id="cancel-menuRegistr"></i>
+        </label>
+        <div class="sidebar-content-menuRegistr">
+            <header>Меню</header>
+            <button id="sidebarBtn-menuRegistr"><a href="/">На главную</a></button>
+
+            <button id="sidebarBtn-menuRegistr"><a href="/authorization">Войти</a></button>
+        </div>
+    </div>
+</div>
+
+{{/if}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{!-- {{#if tokenIsPresent}}
+<div id="navHeaderContainer">
+    <div class="navContent">
+        <div class="contentLeft">
+            <div class="headerImages">
+                <img src="/f62273a932c3f6816162b361a2c6a6d4.jpg" alt="">
+            </div>
+            <div class="menuRegistr">
+                <a href="/home">На главную</a>
+            </div>
+        </div>
+        <div class="contentCenter">
+            <div class="menuProfile">
+                <a href="/profile/{{role}}">Профиль</a>
+
+            </div>
+
+            {{#ifEquals role 'Author'}}
+            <div class="menuCreateBlog">
+                <a href="/createBlog">Написать статью</a>
+            </div>
+            {{else ifEquals role 'Moderator'}}
+            <div class="menuEdit">
+                <a href="/editBlog">Редактировать статью</a>
+            </div>
+            {{/ifEquals}}
+        </div>
+        <div class="contentRight">
+            <a href="/" class="exitToken">Выйти</a>
+        </div>
+    </div>
+</div>
+{{else}}
+<div class="container-fluid" id="navHeaderContainer">
+    <div class="navHeader">
+        <div class="headerImages">
+            <img src="/f62273a932c3f6816162b361a2c6a6d4.jpg" alt="">
+        </div>
+        <div class="menuHeader">
+            <a href="/">Главная</a>
+            {{#ifEquals role 'Author'}}
+            <a href="/createBlog">Написать статью</a>
+            {{else ifEquals role 'Moderator'}}
+            <a href="/editBlog">Редактировать статью</a>
+            {{/ifEquals}}
+            <a href="/registration">Войти</a>
+        </div>
+    </div>
+</div>
+{{/if}} --}}

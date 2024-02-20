@@ -1,0 +1,95 @@
+.profile-content {
+  border: 1px solid rgb(206, 168, 0);
+  margin: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgb(255, 230, 0);
+}
+
+.profile-btn {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+}
+.ApproveBtn,
+.edit {
+  border: 1px solid rgb(255, 230, 0);
+  border-radius: 10px 0;
+  color: #5e0183;
+  width: 130px;
+  margin-bottom: 10px;
+}
+
+.RejectBtn,
+.remove,
+.rejectTextBtn {
+  border: 1px solid rgb(255, 0, 0);
+  border-radius: 10px 0;
+  color: #5e0183;
+  width: 130px;
+  margin-bottom: 10px;
+}
+
+.profile-btn a {
+  color: #5e0183;
+  text-decoration: none;
+}
+.RejectBtn:hover,
+.remove:hover,
+.rejectTextBtn:hover {
+  background-color: rgb(255, 0, 0);
+  color: #000;
+}
+
+.SubmitModeration:hover,
+.ApproveBtn:hover,
+.edit:hover {
+  background-color: rgb(255, 230, 0);
+  color: #000;
+}
+
+.SubmitModeration {
+  border: 1px solid rgb(255, 230, 0);
+  border-radius: 10px 0;
+  color: #5e0183;
+}
+.draft-status {
+  color: gray;
+}
+.waiting-status {
+  color: #ecb500;
+}
+.approved-status {
+  color: #1fbd00;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .category {
+    text-align: center;
+    padding: 0 5px;
+    border: 1px solid rgb(255, 230, 0);
+    margin: 5px;
+  }
+  .categories p{
+    margin-bottom: 0;
+  }
+  .category p{
+   margin-bottom: 0;
+  }
+}
+
+@media screen and  (max-width: 767px) {
+  .category {
+    text-align: center;
+    padding: 0 5px;
+    border: 1px solid rgb(255, 230, 0);
+    margin: 5px;
+  }
+}
+@media screen and (max-width: 600px) {
+}

@@ -1,0 +1,63 @@
+{{#if tokenIsPresent}}
+<div class="container-fluid">
+    <div class="profile-stories">
+        {{#each stories}}
+        <div class="profile-content">
+            <div class="categories">
+                {{#if categoryElem}}
+                {{#isArray categoryElem}}
+                {{#each categoryElem}}
+                <p class="category">{{this}}</p>
+                {{/each}}
+                {{else}}
+                <p class="category">{{categoryElem}}</p>
+                {{/isArray}}
+                {{else}}
+                <p>No category available</p>
+                {{/if}}
+            </div>
+            <p>{{text}}</p>
+            <div class="profile-status">
+                {{#if (eq status 'Одобрено')}}
+                <h6 class="approved-status">{{status}}</h6>
+                <div class="status-actions">
+                    <div class="profile-btn">
+                        <button class="edit"><a href="/edit/{{_id}}">Редактировать</a></button>
+                        <button class="remove"><a href="/remove/{{_id}}">Удалить</a></button>
+                    </div>
+                </div>
+                {{else if (eq status 'Ожидает одобрения')}}
+                <div class="status-actions">
+                    <h6 class="waiting-status">{{status}}</h6>
+                    <div class="profile-btn">
+                        <button class="edit"><a href="/edit/{{_id}}">Редактировать</a></button>
+                        <button class="remove"><a href="/remove/{{_id}}">Удалить</a></button>
+                    </div>
+                </div>
+                {{else if (eq status 'Черновик')}}
+                {{#if rejectComment}}
+                <div class="rejectCommentModerathor">
+                    <h6>Комментарий от модератора</h6>
+                    <p>{{rejectComment}}</p>
+                </div>
+                {{/if}}
+                <div class="status-actions">
+                    <h6 class="draft-status">{{status}}</h6>
+                    <div class="profile-btn">
+                        <button class="edit"><a href="/edit/{{_id}}">Редактировать</a></button>
+                        <button class="remove"><a href="/remove/{{_id}}">Удалить</a></button>
+                        <form action="" method="POST">
+                            <input type="hidden" name="action" value="moderation-link">
+                            <input type="hidden" name="id" value="{{_id}}">
+                            <input type="submit" value="Отправить на модерацию" class="SubmitModeration"></input>
+                        </form>
+                    </div>
+                </div>
+                {{/if}}
+            </div>
+        </div>
+        {{/each}}
+        <div class="pagination"></div>
+    </div>
+</div>
+{{/if}}

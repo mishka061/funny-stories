@@ -1,0 +1,47 @@
+{{#if tokenIsPresent}}
+<div class="container-fluid">
+    <div class="profile-stories">
+        {{#if stories}}
+        {{#each stories}}
+        <div class="profile-content">
+            <p>{{text}}</p>
+            <div class="profile-status">
+
+                <div class="status-actions">
+                    <h6 class="waiting-status">{{status}}</h6>
+                    <div class="profile-btn">
+                        <button class="edit"><a href="/edit/{{_id}}">Редактировать</a></button>
+                        <button class="remove"><a href="/remove/{{_id}}">Удалить</a></button>
+
+                        <form action="" method="POST">
+                            <input type="hidden" name="action" value="AdminApproved">
+                            <input type="hidden" name="id" value="{{_id}}">
+                            <input type="submit" value="Одобрить" class="ApproveBtn"></input>
+
+                        </form>
+                        <button class="RejectBtn">Отклонить</button>
+
+                    </div>
+                    <div class="answerUser" style="display: none;">
+                        <p>Написать автору причину отклонения статьи</p>
+                        <form action="" method="POST">
+                            <input type="hidden" name="action" value="AdminReject">
+                            <input type="hidden" name="id" value="{{_id}}">
+                            <textarea name="rejectComment" rows="2" class="rejectTextAreaStory"></textarea>
+                            <input type="submit" value="Отклонить" class="rejectTextBtn"></input>
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        {{/each}}
+        {{else}}
+        <div class="noStories">
+            <img src="/dlya-prezentatsii-234.jpg" alt="">
+        </div>
+        {{/if}}
+    </div>
+</div>
+{{/if}}

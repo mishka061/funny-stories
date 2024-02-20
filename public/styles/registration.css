@@ -1,0 +1,460 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+.headerImages img {
+  width: 130px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.headerImages1 img {
+  width: 130px;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+.navContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(255, 230, 0);
+  background-color: rgba(245, 240, 200, 0.651);
+}
+.navContent h1 {
+  padding-top: 25px;
+  font-size: 38px;
+}
+
+.headerText {
+  font-style: italic;
+  color: rgb(255, 230, 0);
+  text-shadow: -1px 1px 0 #5e0183, 1px 1px 0 #5e0183;
+}
+
+.sidebar-content-menuRegistr {
+  position: fixed;
+  width: 200px;
+  top: 160px;
+  right: -240px;
+  background-color: #f5f8d0;
+  transition: all 0.5s ease;
+  padding: 10px;
+}
+
+.sidebar-content-menuRegistr header {
+  font-size: 20px;
+  color: #353535;
+
+  text-align: center;
+  background-color: #d8f374;
+  border-radius: 10px 0;
+  font-family: "Lato", sans-serif;
+}
+#sidebarBtn-menuRegistr {
+  font-size: 17px;
+  text-align: start;
+  margin-top: 5px;
+  width: 100%;
+  color: rgb(255, 230, 0);
+  border: 2px solid rgb(255, 230, 0);
+  border-radius: 10px 0;
+}
+#sidebarBtn-menuRegistr a {
+  text-decoration: none;
+  color: #5e0183;
+}
+#sidebarBtn-menuRegistr:hover {
+  background-color: rgb(255, 230, 0);
+}
+#sidebarBtn-menuRegistr a:hover {
+  color: #000000;
+}
+
+.sidebar-content-menuRegistr a i {
+  font-size: 23px;
+  margin-right: 16px;
+}
+.sidebar-content-menuRegistr a span {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+#check-menuRegistr {
+  display: none;
+}
+label #btn-menuRegistr,
+label #cancel-menuRegistr {
+  position: fixed;
+  width: 220px;
+  top: 120px;
+  right: 10px;
+  cursor: pointer;
+  color: rgb(8, 8, 8);
+  border-radius: 5px;
+  background-color: rgb(255, 230, 0);
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    inset -7px -7px 10px 0px rgba(0, 0, 0, 0.1),
+    3.5px 3.5px 20px 0px rgba(0, 0, 0, 0.1), 2px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  height: 35px;
+  width: 35px;
+  text-align: center;
+  padding-top: 10px;
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+  transition: all 0.5s ease;
+}
+label #cancel-menuRegistr {
+  opacity: 0;
+  visibility: hidden;
+}
+#check-menuRegistr:checked ~ .sidebar-content-menuRegistr {
+  right: 0;
+}
+#check-menuRegistr:checked ~ label #btn-menuRegistr {
+  opacity: 0;
+  visibility: hidden;
+}
+#check-menuRegistr:checked ~ label #cancel-menuRegistr {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+
+
+.footerContent {
+  height: 60px;
+  background-color: rgb(255, 230, 0);
+  text-align: center;
+  color: #5e0183;
+  padding-top: 20px;
+}
+
+
+
+.footerRegistration {
+  height: 60px;
+  background-color: rgb(255, 230, 0);
+  text-align: center;
+  color: #5e0183;
+  padding-top: 20px;
+}
+
+h4 {
+  text-align: center;
+
+}
+
+.container-authorization {
+  margin-top: 80px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgb(255, 230, 0);
+}
+
+.container-registration {
+  margin: 20px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  background-color: #fff;
+  padding: 15px;
+  color: #5e0183;
+  box-shadow: 0 5px 10px rgb(255, 230, 0);
+  border-radius: 10px 0;
+}
+.input-box {
+  margin-bottom: 10px;
+}
+
+form .button {
+  height: 45px;
+  margin: 15px 0 0;
+}
+form .button input {
+  height: 100%;
+  width: 100%;
+  font-size: 18px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #5e0183;
+  border: 2px solid rgb(255, 230, 0);
+  border-radius: 10px 0;
+}
+form .button input:hover {
+  background-color: rgb(255, 230, 0);
+  color: #000000;
+}
+
+.message {
+  text-align: center;
+  padding: 10px;
+}
+
+.message a {
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.password-toggle {
+  display: grid;
+  grid-template-rows: auto;
+  text-align: left;
+}
+.input-box span {
+  font-size: 16px;
+}
+.form-control {
+  margin-top: 5px;
+}
+
+.show-password-label {
+  color: rgb(158, 157, 157);
+}
+
+.errorEmail,
+.errorLogin,
+.errorLoginEndEmail {
+  padding-top: 10px;
+  text-align: center;
+  color: red;
+  font-size: 18px;
+  animation: shake 0.4s;
+}
+.errorAuthorization {
+  padding-bottom: 5px;
+  text-align: center;
+  color: red;
+  font-size: 18px;
+  animation: shake 0.4s;
+}
+.messageAuthorization {
+  text-align: center;
+  padding-top: 30px;
+  margin: 10px;
+}
+.messageAuthorization a {
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+#confirmPasswordError {
+  display: none;
+  color: red;
+  font-size: 18px;
+  animation: shake 0.4s;
+}
+
+.selectOptions{
+  margin-top: 10px;
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(5px);
+  }
+}
+
+#error-message {
+  display: none;
+  color: red;
+  font-size: 20px;
+  animation: shakes 0.4s;
+}
+
+@keyframes shakes {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(5px);
+  }
+}
+
+
+
+.show-password-label{
+  margin-top: 5px;
+}
+.spanRadio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.radioConteiner{
+  width: 45%;
+ 
+
+  
+}
+.spanRadioDiv {
+  margin: 0 0 10px;
+  text-align: start;
+  border: 1px solid rgb(255, 230, 0);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.spanRadioDiv span {
+  padding: 5px ;
+
+}
+.spanRadioDiv img ,
+.messageBtnContent img{
+  width: 14px;
+  height: 14px;
+  margin-bottom: 2px;
+}
+.tooltip-toggle {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-text,
+.tooltip-text-questions {
+  background-color: #333333;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: none;
+  padding: 10px;
+  border-radius: 10px;
+  width: 256px;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%);
+  display: none;
+}
+
+.tooltip-toggle-questions:hover .tooltip-text-questions,
+.tooltip-toggle-questions:focus .tooltip-text-questions,
+.tooltip-toggle:hover .tooltip-text,
+.tooltip-toggle:focus .tooltip-text {
+  display: block;
+}
+.tooltip-toggle-questions {
+  position: relative;
+  display: flex;
+  margin-top: 20px;
+}
+
+
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .headerImages img,
+  .headerImages1 img {
+    width: 125px;
+  }
+  .navContent h1 {
+    font-size: 30px;
+  }
+  #sidebarBtn-menuRegistr {
+    font-size: 15px;
+  }
+
+  .sidebar-content-menuRegistr header {
+    font-size: 18px;
+  }
+  .sidebar-content-menuRegistr {
+    width: 180px;
+  }
+
+  label #btn-menuRegistr,
+  label #cancel-menuRegistr {
+    height: 33px;
+    width: 33px;
+  }
+
+  form .button input {
+    font-size: 18px;
+
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  .headerImages img,
+  .headerImages1 img {
+    width: 120px;
+  }
+  .navContent h1 {
+    font-size: 25px;
+  }
+  .sidebar-content-menuRegistr header {
+    font-size: 17px;
+  }
+  .sidebar-content-menuRegistr {
+    width: 150px;
+  }
+
+  label #btn-menuRegistr,
+  label #cancel-menuRegistr {
+    padding-bottom: 15px;
+    height: 30px;
+    width: 30px;
+  }
+
+  #sidebarBtn-menuRegistr {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .headerImages img,
+  .headerImages1 img {
+    width: 115px;
+  }
+  .navContent h1 {
+    font-size: 20px;
+  }
+  .sidebar-content-menuRegistr header {
+    font-size: 16px;
+  }
+  .sidebar-content-menuRegistr {
+    width: 130px;
+  }
+  label #btn-menuRegistr,
+  label #cancel-menuRegistr {
+    padding-bottom: 15px;
+    height: 30px;
+    width: 30px;
+  }
+
+  #sidebarBtn-menuRegistr {
+    font-size: 13px;
+  }
+}
+
